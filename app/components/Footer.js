@@ -1,145 +1,197 @@
 "use client";
 
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa";
+import {
+  MapPin,
+  Phone,
+  MessageCircle,
+  ShieldCheck,
+} from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a2540] text-white">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="bg-slate-900 text-white">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Company */}
           <div>
-            <h2 className="text-3xl font-bold mb-4">DriveSecure</h2>
-            <p className="text-sm text-gray-300 leading-7">
-              Protect your car and bike with affordable vehicle insurance
-              plans. Get instant quotes, fast claim support, and reliable
-              coverage for every journey.
+            <h2 className="text-2xl font-bold">
+              Arvind
+              <span className="text-orange-500"> Insurance Center</span>
+            </h2>
+
+            <p className="mt-4 text-sm leading-7 text-gray-300">
+              Authorized Vehicle Insurance Advisor providing fast insurance
+              quotations, policy renewals and claim assistance for all major
+              insurance companies.
             </p>
+
+            <div className="mt-5 flex flex-wrap gap-2">
+              <span className="rounded-full bg-orange-500/20 px-3 py-1 text-xs">
+                Tata AIG
+              </span>
+
+              <span className="rounded-full bg-orange-500/20 px-3 py-1 text-xs">
+                Shriram
+              </span>
+
+              <span className="rounded-full bg-orange-500/20 px-3 py-1 text-xs">
+                GoDigit
+              </span>
+
+              <span className="rounded-full bg-orange-500/20 px-3 py-1 text-xs">
+                United India
+              </span>
+
+              <span className="rounded-full bg-orange-500/20 px-3 py-1 text-xs">
+                Bajaj Allianz
+              </span>
+            </div>
           </div>
 
-          {/* Insurance Services */}
+          {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Vehicle Insurance</h3>
+            <h3 className="mb-5 text-lg font-semibold">
+              Insurance Services
+            </h3>
+
             <ul className="space-y-3 text-sm text-gray-300">
-              <li>
-                <Link href="#" className="hover:text-white">
-                  Car Insurance
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white">
-                  Bike Insurance
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white">
-                  Commercial Vehicle Insurance
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white">
-                  Third-Party Insurance
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white">
-                  Comprehensive Insurance
-                </Link>
-              </li>
+              <li>Motorcycle Insurance</li>
+              <li>Private Car Insurance</li>
+              <li>Bus Insurance</li>
+              <li>Truck Insurance</li>
+              <li>GCV Insurance</li>
+              <li>EV / E-Rickshaw Insurance</li>
+              <li>Commercial Vehicle Insurance</li>
+              <li>Shop Insurance</li>
+              <li>Term Insurance</li>
+              <li>General Insurance</li>
+              <li>Accident Insurance</li>
             </ul>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="mb-5 text-lg font-semibold">
+              Quick Links
+            </h3>
+
             <ul className="space-y-3 text-sm text-gray-300">
               <li>
-                <Link href="#" className="hover:text-white">
-                  Renew Policy
-                </Link>
+                <Link href="/">Home</Link>
               </li>
+
               <li>
-                <Link href="#" className="hover:text-white">
-                  File a Claim
-                </Link>
+                <Link href="/about">About Us</Link>
               </li>
+
               <li>
-                <Link href="#" className="hover:text-white">
-                  Claim Status
-                </Link>
+                <Link href="/services">Services</Link>
               </li>
+
               <li>
-                <Link href="#" className="hover:text-white">
-                  FAQs
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white">
-                  Contact Us
-                </Link>
+                <Link href="/contact">Contact Us</Link>
               </li>
             </ul>
+
+            <div className="mt-8 flex items-center gap-2">
+              <ShieldCheck className="h-5 w-5 text-orange-500" />
+
+              <span className="text-sm text-gray-300">
+                Authorized Insurance Advisor
+              </span>
+            </div>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <h3 className="mb-5 text-lg font-semibold">
+              Contact Us
+            </h3>
 
-            <div className="space-y-3 text-sm text-gray-300">
-              <p>
-                <strong className="text-white">Address:</strong>
-                <br />
-                221 Business Park,
-                <br />
-                New Delhi, India
-              </p>
+            <div className="space-y-5 text-sm text-gray-300">
+              <div className="flex gap-3">
+                <MapPin className="mt-1 h-5 w-5 text-orange-500" />
 
-              <p>
-                <strong className="text-white">Email:</strong>
-                <br />
-                support@drivesecure.com
-              </p>
+                <p>
+                  Ladoun,
+                  <br />
+                  Chawk Near Patna Bypass Road
+                </p>
+              </div>
 
-              <p>
-                <strong className="text-white">Phone:</strong>
-                <br />
-                +91 98765 43210
-              </p>
+              <div className="flex gap-3">
+                <Phone className="h-5 w-5 text-orange-500" />
+
+                <a
+                  href="tel:6200255088"
+                  className="hover:text-orange-500"
+                >
+                  6200255088
+                </a>
+              </div>
+
+              <div className="flex gap-3">
+                <MessageCircle className="h-5 w-5 text-orange-500" />
+
+                <a
+                  href="https://wa.me/918057266584"
+                  target="_blank"
+                  className="hover:text-orange-500"
+                >
+                  8057266584
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-6 flex gap-3">
+              <Link
+                href="#"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 hover:bg-orange-500"
+              >
+                <FaFacebookF />
+              </Link>
+
+              <Link
+                href="#"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 hover:bg-orange-500"
+              >
+                <FaInstagram />
+              </Link>
+
+              <Link
+                href="#"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 hover:bg-orange-500"
+              >
+                <FaLinkedinIn />
+              </Link>
+
+              <a
+                href="https://wa.me/918057266584"
+                target="_blank"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-green-600 hover:bg-green-700"
+              >
+                <FaWhatsapp />
+              </a>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-300">
-            © {new Date().getFullYear()} DriveSecure. All Rights Reserved.
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-5 text-sm text-gray-400 md:flex-row">
+          <p>
+            © {new Date().getFullYear()} Arvind Insurance Center. All Rights
+            Reserved.
           </p>
 
-          <div className="flex gap-3">
-            <Link
-              href="#"
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 hover:bg-white hover:text-[#0a2540] transition"
-            >
-              <FaFacebookF />
-            </Link>
-
-            <Link
-              href="#"
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 hover:bg-white hover:text-[#0a2540] transition"
-            >
-              <FaInstagram />
-            </Link>
-
-            <Link
-              href="#"
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 hover:bg-white hover:text-[#0a2540] transition"
-            >
-              <FaLinkedinIn />
-            </Link>
-          </div>
+          <p>Designed for Mr Developer chaudhary.</p>
         </div>
       </div>
     </footer>

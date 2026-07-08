@@ -1,32 +1,60 @@
 const partners = [
-  { name: "Cubico", logo: "/images/partners/cubico.png" },
-  { name: "Nuxeo", logo: "/images/partners/nuxeo.png" },
-  { name: "King", logo: "/images/partners/king.png" },
-  { name: "Coffee", logo: "/images/partners/coffee.png" },
-  { name: "Hexagon", logo: "/images/partners/hexagon.png" },
+  {
+    name: "TATA AIG",
+    logo: "/images/partners/tata-aig.png",
+  },
+  {
+    name: "Shriram General Insurance",
+    logo: "/images/partners/shriram.png",
+  },
+  {
+    name: "GoDigit Insurance",
+    logo: "/images/partners/godigit.png",
+  },
+  {
+    name: "United India Insurance",
+    logo: "/images/partners/united-india.png",
+  },
+  {
+    name: "Bajaj Allianz",
+    logo: "/images/partners/bajaj-allianz.png",
+  },
 ];
 
 export default function PartneredWith() {
   return (
-    <section className="bg-[#fbe9d9] py-14 px-6 sm:px-10 lg:px-16">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a2540] mb-10 sm:mb-14">
-          We're Partnered With
-        </h2>
+    <section className="bg-orange-50 py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
+        <div className="mb-12 text-center">
+          <span className="rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-orange-600">
+            Our Trusted Partners
+          </span>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10">
+          <h2 className="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl">
+            Authorized Insurance Companies
+          </h2>
+
+          <p className="mx-auto mt-3 max-w-2xl text-slate-600">
+            We provide vehicle insurance through India's leading insurance
+            companies with quick quotations, policy renewal and claim support.
+          </p>
+        </div>
+
+        {/* Logos */}
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="flex flex-col items-center text-center"
+              className="group flex flex-col items-center rounded-xl border border-orange-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="h-6 sm:h-7 lg:h-8 w-auto object-contain grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition-all duration-200"
+                className="h-16 w-auto object-contain grayscale transition duration-300 group-hover:grayscale-0"
               />
 
-              <p className="mt-3 text-sm font-medium text-[#0a2540]">
+              <p className="mt-4 text-center text-sm font-semibold text-slate-700">
                 {partner.name}
               </p>
             </div>

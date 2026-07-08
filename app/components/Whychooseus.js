@@ -1,213 +1,86 @@
-"use client"
-import { useState } from "react";
-import { Check, X } from "lucide-react";
-
-const features = [
+const reasons = [
   {
-    name: "Instant Online Policy Purchase",
-    comprehensive: true,
-    thirdParty: true,
-    zeroDep: true,
+    title: "Trusted Insurance Advisor",
+    desc: "Years of experience guiding customers to the right policy.",
   },
   {
-    name: "No Hidden Charges",
-    comprehensive: true,
-    thirdParty: true,
-    zeroDep: true,
+    title: "Quick Policy Renewal",
+    desc: "Renew expired or expiring policies in just a few minutes.",
   },
   {
-    name: "Cashless Garage Network",
-    comprehensive: true,
-    thirdParty: false,
-    zeroDep: true,
+    title: "Affordable Premiums",
+    desc: "Compare plans across partners to get the best price.",
   },
   {
-    name: "24×7 Claim Assistance",
-    comprehensive: true,
-    thirdParty: true,
-    zeroDep: true,
+    title: "Fast Claim Assistance",
+    desc: "Dedicated support so your claims move without delay.",
   },
   {
-    name: "Fast Policy Renewal",
-    comprehensive: true,
-    thirdParty: true,
-    zeroDep: true,
+    title: "Multiple Insurance Partners",
+    desc: "Access to 15+ leading insurance companies in one place.",
   },
   {
-    name: "Own Damage Cover",
-    comprehensive: true,
-    thirdParty: false,
-    zeroDep: true,
-  },
-  {
-    name: "Third-Party Liability Cover",
-    comprehensive: true,
-    thirdParty: true,
-    zeroDep: false,
-  },
-  {
-    name: "Accidental Damage Protection",
-    comprehensive: true,
-    thirdParty: false,
-    zeroDep: true,
-  },
-  {
-    name: "Zero Depreciation Benefit",
-    comprehensive: false,
-    thirdParty: false,
-    zeroDep: true,
-  },
-  {
-    name: "Engine Protection Add-on",
-    comprehensive: true,
-    thirdParty: false,
-    zeroDep: true,
-  },
-  {
-    name: "Roadside Assistance",
-    comprehensive: true,
-    thirdParty: false,
-    zeroDep: true,
-  },
-  {
-    name: "No Claim Bonus (NCB)",
-    comprehensive: true,
-    thirdParty: false,
-    zeroDep: true,
+    title: "Friendly Customer Support",
+    desc: "Real people, ready to help before and after you buy.",
   },
 ];
 
-const columns = [
-  {
-    key: "comprehensive",
-    label: "Comprehensive",
-  },
-  {
-    key: "thirdParty",
-    label: "Third-Party",
-  },
-  {
-    key: "zeroDep",
-    label: "Zero Depreciation",
-  },
-];
-
-function Icon({ value }) {
-  return value ? (
-    <Check className="w-5 h-5 text-emerald-500 mx-auto" strokeWidth={3} />
-  ) : (
-    <X className="w-5 h-5 text-red-500 mx-auto" strokeWidth={3} />
-  );
-}
-
-export default function WhyChooseUs() {
-  const [showAll, setShowAll] = useState(false);
-
-  const visibleFeatures = showAll ? features : features.slice(0, 7);
-
+export default function WhyChooseus() {
   return (
-    <section className="bg-white py-14 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
+    <section id="why-us" className="bg-orange-50 py-16 lg:py-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
         {/* Heading */}
-        <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0a2540] mb-3">
-            Compare Vehicle Insurance Plans
+        <div className="max-w-2xl">
+          <span className="inline-flex items-center gap-2 rounded-full bg-orange-100 px-4 py-2 text-sm font-medium text-orange-500">
+            <span className="h-2 w-2 rounded-full bg-orange-500"></span>
+            Our Promise
+          </span>
+
+          <h2 className="mt-5 text-4xl font-bold text-orange-500">
+            Why Choose Arvind Insurance Center?
           </h2>
 
-          <p className="text-gray-600 max-w-2xl mx-auto text-sm">
-            Compare the benefits of Comprehensive, Third-Party, and Zero
-            Depreciation vehicle insurance plans to choose the right protection
-            for your car or bike.
+          <p className="mt-3 text-gray-600">
+            We provide reliable insurance solutions with fast service, affordable
+            premiums, and dedicated customer support.
           </p>
         </div>
 
-        {/* Desktop Table */}
-        <div className="hidden sm:block overflow-hidden rounded-xl border border-gray-200 shadow-sm">
-          {/* Header */}
-          <div className="grid grid-cols-[2fr_1fr_1fr_1fr] bg-[#f6d9bd] px-6 py-4">
-            <span className="font-bold text-[#0a2540]">
-              Insurance Features
-            </span>
-
-            {columns.map((col) => (
-              <span
-                key={col.key}
-                className="text-center font-bold text-[#0a2540]"
-              >
-                {col.label}
-              </span>
-            ))}
-          </div>
-
-          {/* Rows */}
-          {visibleFeatures.map((feature, index) => (
+        {/* Cards */}
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {reasons.map((reason) => (
             <div
-              key={feature.name}
-              className={`grid grid-cols-[2fr_1fr_1fr_1fr] items-center px-6 py-4 ${
-                index % 2 === 0 ? "bg-[#fdf0e2]" : "bg-[#fbe4cd]"
-              }`}
+              key={reason.title}
+              className="flex gap-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-orange-500 hover:shadow-xl"
             >
-              <span className="text-sm text-[#0a2540]">
-                {feature.name}
-              </span>
+              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-orange-500 text-white">
+                <svg
+                  className="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 13l4 4L19 7"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
 
-              {columns.map((col) => (
-                <div key={col.key}>
-                  <Icon value={feature[col.key]} />
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
+              <div>
+                <h3 className="text-lg font-semibold text-orange-500">
+                  {reason.title}
+                </h3>
 
-        {/* Mobile Cards */}
-        <div className="sm:hidden space-y-4">
-          {visibleFeatures.map((feature) => (
-            <div
-              key={feature.name}
-              className="rounded-xl bg-[#fdf0e2] p-4 shadow-sm"
-            >
-              <h3 className="mb-4 font-semibold text-[#0a2540]">
-                {feature.name}
-              </h3>
-
-              <div className="grid grid-cols-3 gap-3 text-center">
-                {columns.map((col) => (
-                  <div key={col.key}>
-                    <Icon value={feature[col.key]} />
-                    <p className="mt-1 text-[11px] text-gray-600">
-                      {col.label}
-                    </p>
-                  </div>
-                ))}
+                <p className="mt-2 text-sm leading-6 text-gray-600">
+                  {reason.desc}
+                </p>
               </div>
             </div>
           ))}
         </div>
-
-        {/* View All Button */}
-        {!showAll && features.length > 7 && (
-          <div className="w-full  text-center">
-            <button
-              onClick={() => setShowAll(true)}
-              className="rounded-lg bg-[#0a2540] w-full cursor-pointer px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#163a5c]"
-            >
-              View All Features
-            </button>
-          </div>
-        )}
-
-        {/* Show Less Button */}
-        {showAll && (
-          <div className="mt-8 text-center">
-            <button
-              onClick={() => setShowAll(false)}
-              className="rounded-lg border border-[#0a2540] px-6 py-3 text-sm font-semibold text-[#0a2540] transition hover:bg-[#0a2540] hover:text-white"
-            >
-              Show Less
-            </button>
-          </div>
-        )}
       </div>
     </section>
   );
