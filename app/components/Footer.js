@@ -141,11 +141,11 @@ export default function Footer() {
                 <MessageCircle className="h-5 w-5 text-orange-500" />
 
                 <a
-                  href="https://wa.me/918057266584"
+                  href="https://wa.me/918051266584"
                   target="_blank"
                   className="hover:text-orange-500"
                 >
-                  8057266584
+                  8051266584
                 </a>
               </div>
             </div>
@@ -173,7 +173,7 @@ export default function Footer() {
               </Link>
 
               <a
-                href="https://wa.me/918057266584"
+                href="https://wa.me/918051266584"
                 target="_blank"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-green-600 hover:bg-green-700"
               >
