@@ -120,7 +120,7 @@ export default function Footer() {
                 <MapPin className="mt-1 h-5 w-5 text-orange-500" />
 
                 <p>
-                  Ladoun,
+                  Ladaura,
                   <br />
                   Chawk Near Patna Bypass Road
                 </p>
