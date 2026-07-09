@@ -73,7 +73,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Address",
-      value: "Ladoun, Chawk Near Patna Bypass Road",
+      value: "Ladaura, Chawk Near Patna Bypass Road",
     },
     {
       icon: Phone,
@@ -83,7 +83,7 @@ export default function ContactPage() {
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      value: "8057266584",
+      value: "8051266584",
     },
     {
       icon: Clock,

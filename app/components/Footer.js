@@ -152,21 +152,21 @@ export default function Footer() {
 
             <div className="mt-6 flex gap-3">
               <Link
-                href="#"
+                href="facebook.com/share/1D25e7SrjM/"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 hover:bg-orange-500"
               >
                 <FaFacebookF />
               </Link>
 
               <Link
-                href="#"
+                href="https://www.instagram.com/kumar_sharma_arvind?utm_source=qr&igsh=aHc4OTliYTF0OTdi"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 hover:bg-orange-500"
               >
                 <FaInstagram />
               </Link>
 
               <Link
-                href="#"
+                href="https://www.linkedin.com/in/arvind-kumar-8a8335237/"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 hover:bg-orange-500"
               >
                 <FaLinkedinIn />
