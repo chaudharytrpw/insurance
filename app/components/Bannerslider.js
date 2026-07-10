@@ -7,27 +7,37 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const SLIDES = [
   {
     id: 1,
-    image: "/imgs/img_1.jpeg",
+    image: "/imgs/image_1.jpeg",
     alt: "Banner 1",
   },
   {
     id: 2,
-    image: "/imgs/img_2.jpeg",
+    image: "/imgs/image_2.jpeg",
     alt: "Banner 2",
   },
   {
     id: 3,
-    image: "/imgs/img_3.jpeg",
+    image: "/imgs/image_3.jpeg",
     alt: "Banner 3",
   },
   {
     id: 4,
-    image: "/imgs/img_4.jpeg",
+    image: "/imgs/image_4.jpeg",
     alt: "Banner 4",
+  },
+  {
+    id: 5,
+    image: "/imgs/image_5.jpeg",
+    alt: "Banner 5",
+  },
+  {
+    id: 6,
+    image: "/imgs/image_6.png",
+    alt: "Banner 6",
   },
 ];
 
-const AUTOPLAY_DELAY = 5000;
+const AUTOPLAY_DELAY = 2000;
 
 export default function Bannerslider() {
   const [current, setCurrent] = useState(0);
@@ -75,8 +85,8 @@ export default function Bannerslider() {
 
   return (
     <div
-      className="relative w-full overflow-hidden select-none
-      h-[220px]
+      className="relative w-full  overflow-hidden select-none
+      h-[210px]
       sm:h-[320px]
       md:h-[420px]
       lg:h-[520px]
