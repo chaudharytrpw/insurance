@@ -85,7 +85,7 @@ export default function Bannerslider() {
 
   return (
     <div
-      className="relative w-full  overflow-hidden select-none
+      className="relative w-full overflow-hidden select-none
       h-[210px]
       sm:h-[320px]
       md:h-[420px]
@@ -97,7 +97,7 @@ export default function Bannerslider() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Slider */}
+      {/* Slider  hello */}
       <div
         className="flex h-full transition-transform duration-700 ease-in-out"
         style={{

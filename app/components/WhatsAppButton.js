@@ -9,7 +9,7 @@ export default function WhatsAppButton() {
       {/* Photo Frame */}
       <div className="w-16 h-16 rounded-full overflow-hidden border-4 border-orange-500 shadow-xl bg-white">
         <Image
-          src="/arvind.jpeg" // Put your image in public/profile.jpg
+          src="/arvind.jpeg" 
           alt="Profile"
           width={64}
           height={64}
