@@ -53,7 +53,7 @@ export default function Reviews() {
                 ))}
               </div>
 
-              {/* Review Text */}
+             
               <p className="mt-5 text-gray-600 leading-7">
                 "{review.text}"
               </p>
