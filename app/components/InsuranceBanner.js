@@ -39,14 +39,14 @@ export default function InsuranceBanner() {
           {/* CTA Buttons */}
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <a
-              href="https://www.tataaig.com/partner/motor-insurance/two-wheeler-insurance"
+              href="https://www.tataaig.com/partner?pmdata=8cd0d94c16fdc15fc4a99bc0944a2327:f7df795ed5783b2a148198a4cec5343634f8b1cb456055465879f2ca7d06f2a8fb1efdc3ff1a6187652e187fd6898144692c09e741c0fa68cb56297519e8bbc8d2dc424d9492f18178b52a55080e41734746ec62e821518c2c8f03526cdf409ca9c82be94878f29f99f2aab876b31e3cf3931b737473fef440c31768f52f2e38fb2b26939a2e03c1858000532a1810a4&utm_source=nova"
               className="rounded-xl border-2 border-orange-500 px-8 py-3 font-semibold text-orange-500 transition hover:bg-orange-500 hover:text-white"
             >
               🏍️ Bike Insurance
             </a>
 
             <a
-              href="https://www.tataaig.com/partner/motor-insurance/car-insurance"
+              href="https://www.tataaig.com/partner?pmdata=d19aa4f9db1a2d255acf90b6adbd1bf7:d47f46b80b78193cb752c020e249a754c0acaca9b085e1ec332a24a57d37d503617d41cc3f4e938fe000da27010d71bf501dcaf5805ffdfc47b38f5035cb3d391abaf44697d75b80a979b086cb0f356c6d137840acb1d6103664d8b7e3f6d7befc793261070c69e08295611caf4cebafb604fad36feee61ba20379e07c257df8152d353d5319bbaec3fd1156c1775c82&utm_source=nova"
               className="rounded-xl bg-orange-500 px-8 py-3 font-semibold text-white transition hover:bg-orange-600"
             >
               🚗 Car Insurance
