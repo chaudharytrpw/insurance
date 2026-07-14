@@ -11,11 +11,13 @@ import Partners from "./components/Partners";
 import Reviews from "./components/Reviews";
 import ContactCTA from "./components/ContactCTA";
 import FAQ from "./components/FAQ";
+import InsuranceBanner from "./components/InsuranceBanner";
 
 export default function Home() {
   return (
     <>
     <Bannerslider/>
+    <InsuranceBanner/>
     <Hero/>
     <Services/>
     <WhyChooseus/>
