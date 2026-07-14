@@ -11,7 +11,7 @@ export default function InsuranceBanner() {
 
           {/* Heading */}
           <h2 className="mt-5 text-3xl font-bold text-gray-900 md:text-5xl">
-            Apna Insurance Aaj Hi Karaye
+            Insurance Aaj Hi Karaye
           </h2>
 
           {/* Description */}
