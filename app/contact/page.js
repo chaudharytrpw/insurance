@@ -2,12 +2,7 @@
 
 import { useState } from "react";
 import toast from "react-hot-toast";
-import {
-  MapPin,
-  Phone,
-  Clock,
-  MessageCircle,
-} from "lucide-react";
+import { MapPin, Phone, Clock, MessageCircle } from "lucide-react";
 
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);
@@ -38,6 +33,37 @@ export default function ContactPage() {
     }));
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   // Name validation
+  //   if (form.name.trim().length < 3) {
+  //     toast.error("Name must be at least 3 characters.");
+  //     return;
+  //   }
+
+  //   // Phone validation
+  //   if (!/^\d{10}$/.test(form.phone)) {
+  //     toast.error("Please enter a valid 10-digit mobile number.");
+  //     return;
+  //   }
+
+  //   setLoading(true);
+
+  //   // Under Development
+  //   toast.success("Quote request feature is under development.");
+
+  //   setForm({
+  //     name: "",
+  //     phone: "",
+  //     email: "",
+  //     vehicle: "",
+  //     message: "",
+  //   });
+
+  //   setLoading(false);
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -55,20 +81,36 @@ export default function ContactPage() {
 
     setLoading(true);
 
-    // Under Development
-    toast.success("Quote request feature is under development.");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
 
-    setForm({
-      name: "",
-      phone: "",
-      email: "",
-      vehicle: "",
-      message: "",
-    });
+      const data = await res.json();
 
-    setLoading(false);
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || "Something went wrong");
+      }
+
+      toast.success("Your inquiry has been sent successfully.");
+
+      setForm({
+        name: "",
+        phone: "",
+        email: "",
+        vehicle: "",
+        message: "",
+      });
+    } catch (error) {
+      toast.error(error.message || "Failed to send inquiry.");
+    } finally {
+      setLoading(false);
+    }
   };
-
   const cards = [
     {
       icon: MapPin,
@@ -101,8 +143,8 @@ export default function ContactPage() {
         </h1>
 
         <p className="mt-5 text-gray-300 max-w-2xl mx-auto">
-          Get your Vehicle Insurance Quote instantly from
-          Arvind Insurance Center.
+          Get your Vehicle Insurance Quote instantly from Arvind Insurance
+          Center.
         </p>
       </section>
 
@@ -121,13 +163,9 @@ export default function ContactPage() {
                   <Icon className="text-orange-500" />
                 </div>
 
-                <h3 className="mt-4 text-black font-bold">
-                  {item.title}
-                </h3>
+                <h3 className="mt-4 text-black font-bold">{item.title}</h3>
 
-                <p className="text-gray-600 text-sm mt-2">
-                  {item.value}
-                </p>
+                <p className="text-gray-600 text-sm mt-2">{item.value}</p>
               </div>
             );
           })}
@@ -142,10 +180,7 @@ export default function ContactPage() {
               Get Free Quote
             </h2>
 
-            <form
-              onSubmit={handleSubmit}
-              className="space-y-5 text-black mt-8"
-            >
+            <form onSubmit={handleSubmit} className="space-y-5 text-black mt-8">
               {/* Name */}
               <input
                 required
@@ -198,12 +233,8 @@ export default function ContactPage() {
                 <option value="Car Insurance">Car Insurance</option>
                 <option value="Truck Insurance">Truck Insurance</option>
                 <option value="Bus Insurance">Bus Insurance</option>
-                <option value="Commercial Vehicle">
-                  Commercial Vehicle
-                </option>
-                <option value="EV / E-Rickshaw">
-                  EV / E-Rickshaw
-                </option>
+                <option value="Commercial Vehicle">Commercial Vehicle</option>
+                <option value="EV / E-Rickshaw">EV / E-Rickshaw</option>
               </select>
 
               {/* Message */}
@@ -226,13 +257,13 @@ export default function ContactPage() {
             </form>
           </div>
 
-          {/* Google Map */}
           <iframe
-            title="Google Map"
-            className="rounded-2xl shadow h-[500px] w-full"
-            src="https://www.google.com/maps?q=Patna,Bihar&output=embed"
+            title="Arvind Electric Location"
+            className="rounded-2xl shadow h-[630px] w-full"
+            src="https://www.google.com/maps?q=26.0791035,85.3494891&z=18&output=embed"
             loading="lazy"
             allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
       </section>

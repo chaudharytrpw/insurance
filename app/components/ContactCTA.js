@@ -28,14 +28,14 @@ export default function ContactCTA() {
             {/* Buttons */}
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
-                href="tel:+911234567890"
+                href="tel:+916200255088"
                 className="rounded-xl bg-white px-8 py-4 font-semibold text-orange-500 shadow-lg transition hover:scale-105 hover:shadow-xl"
               >
                 📞 Call Now
               </a>
 
               <a
-                href="https://wa.me/911234567890"
+                href="https://wa.me/918051266584"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-xl border-2 border-white px-8 py-4 font-semibold text-white transition hover:bg-white hover:text-orange-500"

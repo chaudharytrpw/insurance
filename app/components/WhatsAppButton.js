@@ -7,7 +7,7 @@ export default function WhatsAppButton() {
   return (
     <div className="fixed bottom-5 right-5 z-50 flex flex-col items-center gap-3">
       {/* Photo Frame */}
-      <div className="w-16 h-16 rounded-full overflow-hidden border-4 border-orange-500 shadow-xl bg-white">
+      {/* <div className="w-16 h-16 rounded-full overflow-hidden border-4 border-orange-500 shadow-xl bg-white">
         <Image
           src="/arvind.jpeg" 
           alt="Profile"
@@ -16,7 +16,7 @@ export default function WhatsAppButton() {
           className="w-full h-full object-cover"
           priority
         />
-      </div>
+      </div> */}
 
       {/* WhatsApp Button */}
       <a

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Headphones, Phone } from "lucide-react";
@@ -8,7 +9,6 @@ import { Menu, X, Headphones, Phone } from "lucide-react";
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  // { label: "Services", href: "/services" },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -24,15 +24,27 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex flex-col leading-none"
+            className="flex items-center gap-3"
             onClick={() => setIsOpen(false)}
           >
-            <span className="text-xl font-extrabold text-slate-900 sm:text-2xl lg:text-3xl">
-              Arvind
-            </span>
-            <span className="text-xs font-semibold tracking-wide text-orange-500 sm:text-sm">
-              INSURANCE CENTER
-            </span>
+            <div className="relative h-16 w-16 overflow-hidden rounded-full border-2 border-orange-500 bg-white shadow-lg">
+              <Image
+                src="/arvind.jpeg"
+                alt="Arvind Insurance Center"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+
+            <div className="leading-none">
+              <h1 className="text-xl font-extrabold text-slate-900 sm:text-2xl lg:text-3xl">
+                Arvind
+              </h1>
+              <p className="text-xs font-semibold tracking-widest text-orange-500 sm:text-sm">
+                INSURANCE CENTER
+              </p>
+            </div>
           </Link>
 
           {/* Desktop Menu */}
@@ -115,15 +127,26 @@ export default function Navbar() {
           <Link
             href="/"
             onClick={() => setIsOpen(false)}
-            className="flex flex-col leading-none"
+            className="flex items-center gap-3"
           >
-            <span className="text-xl font-extrabold text-slate-900">
-              Arvind
-            </span>
+            <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-orange-500 bg-white">
+              <Image
+                src="/arvind.jpeg"
+                alt="Arvind Insurance Center"
+                fill
+                className="object-cover"
+              />
+            </div>
 
-            <span className="text-xs font-semibold tracking-wide text-orange-500">
-              INSURANCE CENTER
-            </span>
+            <div className="leading-none">
+              <h1 className="text-lg font-extrabold text-slate-900">
+                Arvind
+              </h1>
+
+              <p className="text-[10px] font-semibold tracking-widest text-orange-500">
+                INSURANCE CENTER
+              </p>
+            </div>
           </Link>
 
           <button
@@ -162,7 +185,7 @@ export default function Navbar() {
           </ul>
         </div>
 
-        {/* Contact Section */}
+        {/* Contact */}
         <div className="absolute bottom-0 left-0 w-full border-t bg-orange-50 p-5">
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-orange-100">
