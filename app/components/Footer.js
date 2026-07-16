@@ -152,7 +152,7 @@ export default function Footer() {
 
             <div className="mt-6 flex gap-3">
               <Link
-                href="facebook.com/share/1D25e7SrjM/"
+                href="https://www.facebook.com/share/1D25e7SrjM/"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 hover:bg-orange-500"
               >
                 <FaFacebookF />
