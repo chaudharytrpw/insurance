@@ -16,33 +16,84 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Arvind Insurance Center | Car & Bike Insurance",
+  metadataBase: new URL("https://arvindinsurance.com"),
+
+  verification: {
+    google: "WI3DDWaGtV4EQeSl7h-XccZ01-xqVUF1JoLPld419iw",
+  },
+
+  title: {
+    default:
+      "Arvind Insurance Center | Car, Bike & Commercial Vehicle Insurance in Muzaffarpur",
+    template: "%s | Arvind Insurance Center",
+  },
+
   description:
-    "Arvind Insurance Center provides Car Insurance, Bike Insurance, Commercial Vehicle Insurance, Insurance Renewal, New Policy, and Claim Assistance at the best prices.",
+    "Arvind Insurance Center is an authorized vehicle insurance advisor in Muzaffarpur, Bihar. Get Car Insurance, Bike Insurance, Commercial Vehicle Insurance, Policy Renewal, and Claim Assistance at affordable prices.",
+
   keywords: [
     "Car Insurance",
     "Bike Insurance",
-    "Vehicle Insurance",
     "Commercial Vehicle Insurance",
+    "Vehicle Insurance",
+    "Motor Insurance",
     "Car Insurance Renewal",
     "Bike Insurance Renewal",
-    "Motor Insurance",
-    "Insurance Claim",
+    "Insurance Renewal",
+    "Insurance Claim Assistance",
+    "Car Insurance Muzaffarpur",
+    "Bike Insurance Muzaffarpur",
+    "Commercial Vehicle Insurance Muzaffarpur",
+    "Insurance Agent Muzaffarpur",
     "Arvind Insurance Center",
   ],
+
   authors: [{ name: "Arvind Insurance Center" }],
   creator: "Arvind Insurance Center",
   publisher: "Arvind Insurance Center",
+
+  alternates: {
+    canonical: "/",
+  },
+
   robots: {
     index: true,
     follow: true,
   },
+
   openGraph: {
-    title: "Arvind Insurance Center | Vehicle Insurance",
+    title:
+      "Arvind Insurance Center | Car, Bike & Commercial Vehicle Insurance",
     description:
-      "Get affordable Car, Bike, and Commercial Vehicle Insurance with easy renewals and claim support.",
+      "Affordable Car, Bike & Commercial Vehicle Insurance with easy renewal and claim assistance in Muzaffarpur.",
+    url: "https://arvindinsurance.com",
+    siteName: "Arvind Insurance Center",
+    locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Arvind Insurance Center",
+      },
+    ],
   },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Arvind Insurance Center",
+    description:
+      "Car, Bike & Commercial Vehicle Insurance in Muzaffarpur.",
+    images: ["/og-image.jpg"],
+  },
+
+  // icons: {
+  //   icon: "/favicon.ico",
+  //   apple: "/apple-touch-icon.png",
+  // },
+
+  category: "Vehicle Insurance",
 };
 
 export default function RootLayout({ children }) {

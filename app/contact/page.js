@@ -115,7 +115,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Address",
-      value: "Ladaura, Chawk Near Patna Bypass Road",
+      value: "Ladaura Chowk,By pass Patna Road,Muzaffarpur, Bihar",
     },
     {
       icon: Phone,
