@@ -33,37 +33,7 @@ export default function ContactPage() {
     }));
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   // Name validation
-  //   if (form.name.trim().length < 3) {
-  //     toast.error("Name must be at least 3 characters.");
-  //     return;
-  //   }
-
-  //   // Phone validation
-  //   if (!/^\d{10}$/.test(form.phone)) {
-  //     toast.error("Please enter a valid 10-digit mobile number.");
-  //     return;
-  //   }
-
-  //   setLoading(true);
-
-  //   // Under Development
-  //   toast.success("Quote request feature is under development.");
-
-  //   setForm({
-  //     name: "",
-  //     phone: "",
-  //     email: "",
-  //     vehicle: "",
-  //     message: "",
-  //   });
-
-  //   setLoading(false);
-  // };
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -257,14 +227,26 @@ export default function ContactPage() {
             </form>
           </div>
 
-          <iframe
-            title="Arvind Electric Location"
-            className="rounded-2xl shadow h-[630px] w-full"
-            src="https://www.google.com/maps?q=26.0791035,85.3494891&z=18&output=embed"
-            loading="lazy"
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+          <div className="relative w-full">
+  <iframe
+    title="Arvind Electric Location"
+    className="rounded-2xl shadow h-[630px] w-full"
+    src="https://www.google.com/maps?q=26.0791035,85.3494891&z=18&output=embed"
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+
+  {/* View button */}
+  <a
+    href="https://maps.app.goo.gl/8ExdsdjTCQjEvnni6?g_st=aw"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="absolute bottom-4 right-4 bg-white text-black px-4 py-2 rounded-lg shadow-lg hover:bg-gray-100 font-medium"
+  >
+    📍 View on Google Maps
+  </a>
+</div>
         </div>
       </section>
     </main>
