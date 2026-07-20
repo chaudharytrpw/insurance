@@ -24,7 +24,7 @@ export const metadata = {
 
   title: {
     default:
-      "Arvind Insurance Center | Car, Bike & Commercial Vehicle Insurance in Muzaffarpur",
+      "Arvind Insurance Center",
     template: "%s | Arvind Insurance Center",
   },
 
